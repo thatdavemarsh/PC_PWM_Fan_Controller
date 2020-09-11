@@ -14,3 +14,9 @@ This was a good exercise to better understand the timers and interrupts of the A
 The project was breadboarded and I also took my first crack at an ordered PCB.
 
 Current status is in PCB assembly.
+
+There is no fancy translation function for the output PWM, currentlyt uses a linear map function:
+
+duty_PWM = map (tDuty_In , 35, 90, 20, 100);
+
+Takes the precoditioned %duty cycle as measured and spans it from 20% to 100% output.  Any transform here can take the measured input range of 35-90 and output any valid PWM output from 0 to 100.  In testing, the board I had never really output less than 35% or more than 90%.  The code check for ranges outside of these and caps them prior to this line.
