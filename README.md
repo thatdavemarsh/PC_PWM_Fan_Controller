@@ -13,9 +13,9 @@ This was a good exercise to better understand the timers and interrupts of the A
 
 The project was breadboarded and I also took my first crack at an ordered PCB.
 
-Current status is in PCB assembly.
+Current status is completed.
 
-There is no fancy translation function for the output PWM, currentlyt uses a linear map function:
+There is no fancy translation function for the output PWM, currently uses a linear map function:
 
 duty_PWM = map (tDuty_In , 35, 90, 20, 100);
 
